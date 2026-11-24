@@ -1,0 +1,820 @@
+{
+  "datasets": [
+    {
+      "name": "credit_risk_purpose",
+      "displayName": "Credit Risk by Loan Purpose",
+      "config": {
+        "source": "workspace.default.credit_risk_gold_purpose",
+        "measures": [
+          {
+            "name": "total_loans",
+            "expr": "SUM(total_loans)",
+            "displayName": "Total Loans"
+          },
+          {
+            "name": "default_loans",
+            "expr": "SUM(default_loans)",
+            "displayName": "Default Loans"
+          },
+          {
+            "name": "default_rate",
+            "expr": "SUM(default_loans) / SUM(total_loans)",
+            "displayName": "Default Rate",
+            "format": {
+              "type": "percentage",
+              "decimalPlaces": {
+                "type": "exact",
+                "places": 2.0
+              }
+            }
+          },
+          {
+            "name": "total_loan_amount",
+            "expr": "SUM(total_loan_amount)",
+            "displayName": "Total Loan Amount",
+            "format": {
+              "type": "currency",
+              "currencyCode": "BRL",
+              "abbreviation": "compact"
+            }
+          },
+          {
+            "name": "default_exposure",
+            "expr": "SUM(default_exposure)",
+            "displayName": "Default Exposure",
+            "format": {
+              "type": "currency",
+              "currencyCode": "BRL",
+              "abbreviation": "compact"
+            }
+          }
+        ],
+        "version": "1.1",
+        "comment": "Loan default metrics by loan purpose",
+        "dimensions": [
+          {
+            "name": "loan_purpose",
+            "expr": "loan_purpose",
+            "displayName": "Loan Purpose"
+          }
+        ]
+      }
+    },
+    {
+      "name": "credit_risk_income",
+      "displayName": "Credit Risk by Income Category",
+      "config": {
+        "source": "workspace.default.credit_risk_gold_income",
+        "measures": [
+          {
+            "name": "total_loans",
+            "expr": "SUM(total_loans)",
+            "displayName": "Total Loans"
+          },
+          {
+            "name": "default_loans",
+            "expr": "SUM(default_loans)",
+            "displayName": "Default Loans"
+          },
+          {
+            "name": "default_rate",
+            "expr": "SUM(default_loans) / SUM(total_loans)",
+            "displayName": "Default Rate",
+            "format": {
+              "type": "percentage",
+              "decimalPlaces": {
+                "type": "exact",
+                "places": 2.0
+              }
+            }
+          },
+          {
+            "name": "total_loan_amount",
+            "expr": "SUM(total_loan_amount)",
+            "displayName": "Total Loan Amount",
+            "format": {
+              "type": "currency",
+              "currencyCode": "BRL",
+              "abbreviation": "compact"
+            }
+          },
+          {
+            "name": "default_exposure",
+            "expr": "SUM(default_exposure)",
+            "displayName": "Default Exposure",
+            "format": {
+              "type": "currency",
+              "currencyCode": "BRL",
+              "abbreviation": "compact"
+            }
+          }
+        ],
+        "version": "1.1",
+        "comment": "Loan default metrics by income category",
+        "dimensions": [
+          {
+            "name": "income_category",
+            "expr": "income_category",
+            "displayName": "Income Category"
+          }
+        ]
+      }
+    },
+    {
+      "name": "credit_risk_kpis",
+      "displayName": "Credit Risk KPIs",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.credit_risk_gold_kpis",
+        "comment": "Executive credit risk and loan default KPIs from the gold layer",
+        "measures": [
+          {
+            "name": "total_loans",
+            "expr": "SUM(total_loans)",
+            "displayName": "Total Loans"
+          },
+          {
+            "name": "default_loans",
+            "expr": "SUM(default_loans)",
+            "displayName": "Default Loans"
+          },
+          {
+            "name": "default_rate",
+            "expr": "SUM(default_loans) / SUM(total_loans)",
+            "displayName": "Default Rate",
+            "format": {
+              "type": "percentage",
+              "decimalPlaces": {
+                "type": "exact",
+                "places": 2.0
+              }
+            }
+          },
+          {
+            "name": "total_loan_amount",
+            "expr": "SUM(total_loan_amount)",
+            "displayName": "Total Loan Amount",
+            "format": {
+              "type": "currency",
+              "currencyCode": "BRL",
+              "abbreviation": "compact"
+            }
+          },
+          {
+            "name": "default_exposure",
+            "expr": "SUM(default_exposure)",
+            "displayName": "Default Exposure",
+            "format": {
+              "type": "currency",
+              "currencyCode": "BRL",
+              "abbreviation": "compact"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "credit_risk_score",
+      "displayName": "Credit Risk by Credit Score",
+      "config": {
+        "source": "workspace.default.credit_risk_gold_score",
+        "measures": [
+          {
+            "name": "total_loans",
+            "expr": "SUM(total_loans)",
+            "displayName": "Total Loans"
+          },
+          {
+            "name": "default_loans",
+            "expr": "SUM(default_loans)",
+            "displayName": "Default Loans"
+          },
+          {
+            "name": "default_rate",
+            "expr": "SUM(default_loans) / SUM(total_loans)",
+            "displayName": "Default Rate",
+            "format": {
+              "type": "percentage",
+              "decimalPlaces": {
+                "type": "exact",
+                "places": 2.0
+              }
+            }
+          },
+          {
+            "name": "total_loan_amount",
+            "expr": "SUM(total_loan_amount)",
+            "displayName": "Total Loan Amount",
+            "format": {
+              "type": "currency",
+              "currencyCode": "BRL",
+              "abbreviation": "compact"
+            }
+          },
+          {
+            "name": "default_exposure",
+            "expr": "SUM(default_exposure)",
+            "displayName": "Default Exposure",
+            "format": {
+              "type": "currency",
+              "currencyCode": "BRL",
+              "abbreviation": "compact"
+            }
+          }
+        ],
+        "version": "1.1",
+        "comment": "Loan default metrics by credit score category",
+        "dimensions": [
+          {
+            "name": "credit_score_category",
+            "expr": "credit_score_category",
+            "displayName": "Credit Score Category"
+          }
+        ]
+      }
+    }
+  ],
+  "pages": [
+    {
+      "name": "8d8dc54e",
+      "displayName": "Credit Risk & Loan Default Analytics",
+      "layout": [
+        {
+          "widget": {
+            "name": "kpi_total_loans",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_kpis",
+                  "fields": [
+                    {
+                      "name": "measure(total_loans)",
+                      "expression": "MEASURE(`total_loans`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Total Loans"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(total_loans)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 2,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_default_loans",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_kpis",
+                  "fields": [
+                    {
+                      "name": "measure(default_loans)",
+                      "expression": "MEASURE(`default_loans`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "Default Loans",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(default_loans)",
+                  "rowNumber": 0,
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 0,
+            "width": 2,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_default_rate",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_kpis",
+                  "fields": [
+                    {
+                      "name": "measure(default_rate)",
+                      "expression": "MEASURE(`default_rate`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Default Rate"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(default_rate)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 0,
+            "width": 2,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_total_loan_amount",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_kpis",
+                  "fields": [
+                    {
+                      "name": "measure(total_loan_amount)",
+                      "expression": "MEASURE(`total_loan_amount`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "Total Loan Amount (BRL)",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(total_loan_amount)",
+                  "rowNumber": 0,
+                  "formatTemplate": "{{ @formatted }}",
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "BRL",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 3,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_default_exposure",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_kpis",
+                  "fields": [
+                    {
+                      "name": "measure(default_exposure)",
+                      "expression": "MEASURE(`default_exposure`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "Default Exposure (BRL)",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(default_exposure)",
+                  "rowNumber": 0,
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "BRL",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 0,
+            "width": 3,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "default_rate_by_score",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_score",
+                  "fields": [
+                    {
+                      "name": "credit_score_category",
+                      "expression": "`credit_score_category`"
+                    },
+                    {
+                      "name": "measure(default_rate)",
+                      "expression": "MEASURE(`default_rate`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "Default Rate by Credit Score Category",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "credit_score_category",
+                  "displayName": "credit_score_category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "measure(default_rate)",
+                  "displayName": "default_rate",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "credit_score_category",
+                  "displayName": "credit_score_category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 4,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "default_rate_by_income",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_income",
+                  "fields": [
+                    {
+                      "name": "income_category",
+                      "expression": "`income_category`"
+                    },
+                    {
+                      "name": "measure(default_rate)",
+                      "expression": "MEASURE(`default_rate`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Default Rate by Income Category"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "income_category",
+                  "displayName": "income_category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "measure(default_rate)",
+                  "displayName": "default_rate",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "income_category",
+                  "displayName": "income_category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 4,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "default_rate_by_purpose",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_purpose",
+                  "fields": [
+                    {
+                      "name": "loan_purpose",
+                      "expression": "`loan_purpose`"
+                    },
+                    {
+                      "name": "measure(default_rate)",
+                      "expression": "MEASURE(`default_rate`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "Default Rate by Loan Purpose",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "loan_purpose",
+                  "displayName": "loan_purpose",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "measure(default_rate)",
+                  "displayName": "default_rate",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "loan_purpose",
+                  "displayName": "loan_purpose",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 11,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "loan_amount_vs_default_exposure",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "credit_risk_score",
+                  "fields": [
+                    {
+                      "name": "credit_score_category",
+                      "expression": "`credit_score_category`"
+                    },
+                    {
+                      "name": "measure(total_loan_amount)",
+                      "expression": "MEASURE(`total_loan_amount`)"
+                    },
+                    {
+                      "name": "measure(default_exposure)",
+                      "expression": "MEASURE(`default_exposure`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "Total Loan Amount vs Default Exposure (BRL)",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "mark": {
+                "layout": "group"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "credit_score_category",
+                  "axis": {
+                    "title": "Credit Score Category"
+                  },
+                  "displayName": "Credit Score Category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "axis": {
+                    "title": "Amount (BRL)"
+                  },
+                  "fields": [
+                    {
+                      "fieldName": "measure(total_loan_amount)",
+                      "displayName": "Total Loan Amount"
+                    },
+                    {
+                      "fieldName": "measure(default_exposure)",
+                      "displayName": "Default Exposure"
+                    }
+                  ],
+                  "format": {
+                    "abbreviation": "compact",
+                    "currencyCode": "BRL",
+                    "decimalPlaces": {
+                      "places": 1,
+                      "type": "max"
+                    },
+                    "type": "number-currency"
+                  },
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 11,
+            "width": 6,
+            "height": 7
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "canvasBackgroundColor": {
+        "light": "#E9EDF2",
+        "dark": "#10161C"
+      },
+      "widgetBackgroundColor": {
+        "light": "#FCFCFD",
+        "dark": "#161D24"
+      },
+      "widgetBorderColor": {
+        "light": "#FCFCFD",
+        "dark": "#161D24"
+      },
+      "visualizationColors": [
+        "#1F4E79",
+        "#C85070",
+        "#52A870",
+        "#C89930",
+        "#15AFDD"
+      ],
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED",
+      "widgetPadding": 12,
+      "widgetMargin": 8,
+      "widgetCornerRadius": 8,
+      "widgetShadow": 10,
+      "fontSettings": {
+        "base": {
+          "fontFamily": "Inter"
+        }
+      }
+    },
+    "applyModeEnabled": false
+  }
+}
